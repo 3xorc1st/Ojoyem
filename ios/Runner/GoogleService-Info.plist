@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>157014149605-c572n2sdmjv2sve5rcuuim0n1746berc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.157014149605-c572n2sdmjv2sve5rcuuim0n1746berc</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>157014149605-454avu02obta2r9fnms5ro0sjm3tk784.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCrR7R4jV4oi2TwmsEuraL9W8LdKvCaZhA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>157014149605</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.ojoyemapp</string>
+	<key>PROJECT_ID</key>
+	<string>dioapp-9c080</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dioapp-9c080.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:157014149605:ios:485a827d5f08e50300070c</string>
+</dict>
+</plist>

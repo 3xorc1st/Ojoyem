@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "157014149605",
+    "project_id": "dioapp-9c080",
+    "storage_bucket": "dioapp-9c080.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157014149605:android:7e2168e3db6ab4a600070c",
+        "android_client_info": {
+          "package_name": "com.example.ojoyem_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157014149605-8n05jnh1ilmqmtrm8dsfbsnb4vkhlv1k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ojoyem_app",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "157014149605-ulj7pjc6k4dhlleg5e42sm3m8gapsbcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK2wdqzr2aoi4YEHNKUd3nXys7fCnjKSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157014149605-ulj7pjc6k4dhlleg5e42sm3m8gapsbcu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "157014149605-c572n2sdmjv2sve5rcuuim0n1746berc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ojoyemapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157014149605:android:ba0defb2e3a0ca4500070c",
+        "android_client_info": {
+          "package_name": "com.example.ojoyemapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157014149605-454avu02obta2r9fnms5ro0sjm3tk784.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ojoyemapp",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "157014149605-ulj7pjc6k4dhlleg5e42sm3m8gapsbcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK2wdqzr2aoi4YEHNKUd3nXys7fCnjKSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157014149605-ulj7pjc6k4dhlleg5e42sm3m8gapsbcu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "157014149605-c572n2sdmjv2sve5rcuuim0n1746berc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ojoyemapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
