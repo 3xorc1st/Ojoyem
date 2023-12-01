@@ -4,11 +4,13 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/pacientemenuprin/pacientemenuprin_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 import 'resultadosdeescanner_model.dart';
 export 'resultadosdeescanner_model.dart';
 
@@ -67,100 +69,85 @@ class _ResultadosdeescannerWidgetState
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Container(
-                      width: 392.0,
-                      height: 100.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Color(0xFF3A78D4),
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 3.0,
-                                color: Color(0x33000000),
-                                offset: Offset(0.0, 1.0),
-                              )
-                            ],
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 1.0, 0.0, 0.0),
-                            child: Container(
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF3A78D4),
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 3.0,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0.0, 1.0),
-                                  )
-                                ],
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF3A78D4),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 3.0,
+                              color: Color(0x33000000),
+                              offset: Offset(0.0, 1.0),
+                            )
+                          ],
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 16.0, 16.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Expanded(
+                                child: FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 30.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 60.0,
+                                  icon: Icon(
+                                    Icons.arrow_back,
+                                    color: Color(0xFF1E1E1E),
+                                    size: 30.0,
+                                  ),
+                                  onPressed: () async {
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
-                              child: Padding(
+                              Container(
+                                width: 87.0,
+                                height: 87.0,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context).accent2,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color:
+                                        FlutterFlowTheme.of(context).secondary,
+                                    width: 2.0,
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      2.0, 2.0, 2.0, 2.0),
+                                  child: AuthUserStreamWidget(
+                                    builder: (context) => ClipRRect(
+                                      borderRadius: BorderRadius.circular(50.0),
+                                      child: CachedNetworkImage(
+                                        fadeInDuration:
+                                            Duration(milliseconds: 500),
+                                        fadeOutDuration:
+                                            Duration(milliseconds: 500),
+                                        imageUrl: currentUserPhoto,
+                                        width: 60.0,
+                                        height: 2.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    16.0, 16.0, 16.0, 16.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
+                                    16.0, 0.0, 0.0, 0.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Expanded(
-                                      child: FlutterFlowIconButton(
-                                        borderColor: Colors.transparent,
-                                        borderRadius: 30.0,
-                                        borderWidth: 1.0,
-                                        buttonSize: 60.0,
-                                        icon: Icon(
-                                          Icons.arrow_back,
-                                          color: Color(0xFF1E1E1E),
-                                          size: 30.0,
-                                        ),
-                                        onPressed: () async {
-                                          Navigator.pop(context);
-                                        },
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 87.0,
-                                      height: 87.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .accent2,
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondary,
-                                          width: 2.0,
-                                        ),
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            2.0, 2.0, 2.0, 2.0),
-                                        child: AuthUserStreamWidget(
-                                          builder: (context) => ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(50.0),
-                                            child: CachedNetworkImage(
-                                              fadeInDuration:
-                                                  Duration(milliseconds: 500),
-                                              fadeOutDuration:
-                                                  Duration(milliseconds: 500),
-                                              imageUrl: currentUserPhoto,
-                                              width: 60.0,
-                                              height: 2.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 0.0, 0.0),
@@ -171,113 +158,95 @@ class _ResultadosdeescannerWidgetState
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
+                                          Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              AuthUserStreamWidget(
+                                                builder: (context) => Text(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.nombre,
+                                                      ''),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .headlineSmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryBtnText,
+                                                      ),
+                                                ),
+                                              ),
+                                              AuthUserStreamWidget(
+                                                builder: (context) => Text(
+                                                  valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.apellidos,
+                                                      ''),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .headlineSmall
+                                                      .override(
+                                                        fontFamily: 'Outfit',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryBtnText,
+                                                      ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 0.0, 0.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    AuthUserStreamWidget(
-                                                      builder: (context) =>
-                                                          Text(
-                                                        valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.nombre,
-                                                            ''),
-                                                        style:
+                                                    0.0, 4.0, 0.0, 0.0),
+                                            child: Text(
+                                              currentUserEmail,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .headlineSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryBtnText,
-                                                                ),
+                                                                .primaryBtnText,
                                                       ),
-                                                    ),
-                                                    AuthUserStreamWidget(
-                                                      builder: (context) =>
-                                                          Text(
-                                                        valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.apellidos,
-                                                            ''),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .headlineSmall
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryBtnText,
-                                                                ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 4.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    currentUserEmail,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBtnText,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ],
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: FlutterFlowIconButton(
-                                        borderColor: Colors.transparent,
-                                        borderRadius: 30.0,
-                                        borderWidth: 1.0,
-                                        buttonSize: 60.0,
-                                        fillColor: Color(0xFF3A78D4),
-                                        icon: Icon(
-                                          Icons.menu,
-                                          color: Color(0xFF1E1E1E),
-                                          size: 40.0,
-                                        ),
-                                        onPressed: () async {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  PacientemenuprinWidget(),
-                                            ),
-                                          );
-                                        },
-                                      ),
-                                    ),
                                   ],
                                 ),
                               ),
-                            ),
+                              Expanded(
+                                child: FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 30.0,
+                                  borderWidth: 1.0,
+                                  buttonSize: 60.0,
+                                  fillColor: Color(0xFF3A78D4),
+                                  icon: Icon(
+                                    Icons.menu,
+                                    color: Color(0xFF1E1E1E),
+                                    size: 40.0,
+                                  ),
+                                  onPressed: () async {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            PacientemenuprinWidget(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -290,7 +259,7 @@ class _ResultadosdeescannerWidgetState
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           AuthUserStreamWidget(
                             builder: (context) => ClipRRect(
@@ -303,6 +272,76 @@ class _ResultadosdeescannerWidgetState
                                 fit: BoxFit.cover,
                               ),
                             ),
+                          ),
+                          Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              FFButtonWidget(
+                                onPressed: () async {
+                                  await actions.pdfInvoiceDownload(
+                                    context,
+                                    'title',
+                                    'body',
+                                  );
+                                },
+                                text: 'Descargar',
+                                options: FFButtonOptions(
+                                  height: 40.0,
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      24.0, 0.0, 24.0, 0.0),
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 0.0),
+                                  color: Color(0xFF0099FF),
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w300,
+                                      ),
+                                  elevation: 3.0,
+                                  borderSide: BorderSide(
+                                    color: Colors.transparent,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                              ),
+                              Builder(
+                                builder: (context) => FFButtonWidget(
+                                  onPressed: () async {
+                                    await Share.share(
+                                      'Check out FlutterFlow: https://flutterflow.io',
+                                      sharePositionOrigin:
+                                          getWidgetBoundingBox(context),
+                                    );
+                                  },
+                                  text: 'Compartir',
+                                  options: FFButtonOptions(
+                                    height: 40.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        24.0, 0.0, 24.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: Color(0xFF0099FF),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
